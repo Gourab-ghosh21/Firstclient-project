@@ -43,30 +43,43 @@ client/
 
 ## 🚀 Quick Start Guide
 
-### 1. Run the Backend API
+### 1. Unified Start (Recommended — One Command)
+
+From the project root directory:
 
 ```bash
-cd backend
-npm install
 npm run dev
 ```
 
-- **API URL**: `http://localhost:5001`
-- **Health Check**: `http://localhost:5001/api/health`
+This concurrently launches both services:
+- 🌐 **Frontend (Next.js)**: [http://localhost:3000](http://localhost:3000)
+- ⚙️ **Backend (Express API)**: [http://localhost:5001](http://localhost:5001)
+- 🩺 **Health Check**: [http://localhost:5001/api/health](http://localhost:5001/api/health)
 
-### 2. Run the Frontend Website
-
-In a separate terminal:
+### 2. Or Run Individually
 
 ```bash
-cd frontend
-npm install
-npm run dev
+# Frontend only (from root)
+npm run dev:frontend
+
+# Backend only (from root)
+npm run dev:backend
+```
+
+Or by navigating to subdirectories:
+
+```bash
+# Backend
+cd backend && npm run dev
+
+# Frontend
+cd frontend && npm run dev
 ```
 
 - **Frontend URL**: `http://localhost:3000`
 - **Catalog**: `http://localhost:3000/products`
 - **Admin Desk**: `http://localhost:3000/admin` *(Passcode: `jyoti2026`)*
+
 
 ---
 
