@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-dark: #141518;
+    --brand-charcoal: #1B1D21;
+    --brand-ivory: #FAF7F0;
+    --brand-cream: #F4ECE1;
+    --brand-gold: #DFB262;
+    --brand-gold-hover: #CE9F4C;
+    --brand-tan: #DFB87F;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  body {
+    background-color: #FAF7F0;
+    color: #1A1B1E;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Accessible focus indicators for WCAG 2.1 AA */
+  :focus-visible {
+    outline: 2px solid #DFB262;
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4ECE1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8D0C2;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C4BAA9;
+}
